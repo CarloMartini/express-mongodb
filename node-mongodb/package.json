@@ -1,0 +1,28 @@
+{
+  "name": "node-mongodb",
+  "version": "1.0.0",
+  "description": "Node app with MongoDB driver module, assertion tests and promises to handle operations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarloMartini/node-mongodb.git"
+  },
+  "keywords": [
+    "mongodb",
+    "node"
+  ],
+  "author": "Carlo Martini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarloMartini/node-mongodb/issues"
+  },
+  "homepage": "https://github.com/CarloMartini/node-mongodb#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "mongodb": "^3.6.4"
+  }
+}
