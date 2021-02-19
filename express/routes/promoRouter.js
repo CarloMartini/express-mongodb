@@ -4,8 +4,9 @@ const mongoose = require('mongoose');
 
 const promotions = require('../models/promotions');
 
-const promoRouter = express.Router();
+var authenticate = require('../authenticate');
 
+const promoRouter = express.Router();
 promoRouter.use(bodyParser.json());
 
 promoRouter.route('/')
@@ -121,7 +122,7 @@ promoRouter.route('/:promotionId/comments')
         promotions.findById(req.params.promotionId)
             .then((promotion) => {
                 if (promotion != null) {
-                    for (var i = (promotion.comments.length - 1); i >= 0; i--) {
+                    for (let i = (promotion.comments.length - 1); i >= 0; i--) {
                         promotion.comments.id(promotion.comments[i]._id).remove();
                     }
                     promotion.save()
